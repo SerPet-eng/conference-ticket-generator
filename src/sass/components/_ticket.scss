@@ -1,0 +1,83 @@
+@use '../variables.scss' as *;
+
+.ticket-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-content: center;
+  min-height: 100%;
+
+  padding: 1rem;
+
+  .ticket-header {
+    margin-bottom: 5rem;
+
+    .ticket-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .ticket-logo-text {
+        font-size: 2rem;
+        font-weight: $fontWeights_800;
+      }
+    }
+
+    .ticket-date {
+      margin-left: 2.5rem;
+    }
+  }
+
+  .ticket-code {
+    grid-row: span 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100px;
+
+    margin-left: auto;
+
+    .ticket-code-text {
+      font-size: 2rem;
+      color: $color_Neutral_500;
+      transform: rotate(90deg);
+      letter-spacing: 2px;
+
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        border-bottom: 3px dashed $color_Neutral_700;
+        bottom: -30px;
+        transform: translate(-20%, -50%);
+        width: 15vw;
+        height: 1px;
+      }
+    }
+  }
+
+  .ticket-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    width: 400px;
+
+    .ticket-text {
+      .ticket-name {
+        font-size: 1.5rem;
+        font-weight: $fontWeights_700;
+        line-height: 1.2;
+      }
+      .ticket-email {
+        display: flex;
+      }
+    }
+  }
+
+  .ticket-image {
+    width: 20%;
+  }
+}

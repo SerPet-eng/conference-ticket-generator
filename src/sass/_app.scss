@@ -1,0 +1,14 @@
+@use './variables.scss' as *;
+
+.app {
+  @include responsive-background();
+
+  color: $color_Neutral_100;
+
+  font-family: 'Inconsolata', monospace;
+
+  display: grid;
+  place-content: center;
+
+  overflow-x: hidden;
+}

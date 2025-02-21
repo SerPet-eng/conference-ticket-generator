@@ -1,0 +1,16 @@
+@use '../variables.scss' as *;
+
+.error,
+.input-error {
+  color: $color_Primary_700;
+}
+
+.input-error {
+  padding: 0.75rem;
+  border: 1px solid $color_Primary_700;
+  border-radius: 10px;
+  background-color: $color_Neutral_200;
+  width: 100%;
+
+  color: $color_Neutral_100;
+}

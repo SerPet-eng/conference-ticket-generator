@@ -1,0 +1,28 @@
+@use '../variables.scss' as *;
+
+.home {
+  @include flexAllCenter();
+  gap: 1rem;
+
+  padding: 1rem;
+
+  width: 700px;
+  .home-text {
+    .home-title {
+      font-weight: $fontWeights_700;
+      font-size: 3rem;
+      line-height: 1.2;
+    }
+    .home-subtitle {
+      color: $fontWeights_700;
+      font-size: $fontSize_Label;
+      font-weight: 200;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .home {
+    width: auto;
+  }
+}

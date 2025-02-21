@@ -1,0 +1,41 @@
+@use '../variables.scss' as *;
+
+.drop-image {
+  padding: 1rem;
+  @include flexAlignCenter();
+
+  .drop-image-container {
+    @include flexAlignCenter();
+    gap: 0.5rem;
+
+    .uploaded-image {
+      width: 50px;
+
+      @include uploadBorder();
+    }
+
+    .upload-icon {
+      padding: 0.5rem;
+      @include uploadBorder();
+    }
+
+    .drop-buttons {
+      display: flex;
+      gap: 0.5rem;
+
+      button {
+        padding: 0.25rem 0.5rem;
+        color: $color_Neutral_100;
+        border: none;
+        border-radius: 5px;
+        background-color: $color_Neutral_200;
+
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

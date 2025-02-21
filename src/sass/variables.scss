@@ -1,0 +1,87 @@
+// Colors
+$color_Primary_500: hsl(7, 88%, 67%);
+$color_Primary_700: hsl(7, 71%, 60%);
+
+$color_Gradient_Text_from: hsl(7, 86%, 67%);
+$color_Gradient_Text_to: hsl(0, 0%, 100%);
+
+$color_Neutral_900: hsl(248, 70%, 10%);
+$color_Neutral_700: hsl(245, 19%, 35%);
+$color_Neutral_500: hsl(245, 15%, 58%);
+$color_Neutral_300: hsl(252, 6%, 83%);
+$color_Neutral_200: hsla(0, 4%, 37%, 0.322);
+$color_Neutral_100: hsl(0, 0%, 100%);
+
+$fontSize_Label: 20px;
+
+// Font weights
+$fontWeights_400: 400;
+$fontWeights_500: 500;
+$fontWeights_700: 700;
+$fontWeights_800: 800;
+
+// Mixins - For App Background
+@mixin responsive-background() {
+  background: url('../assets/images/pattern-circle.svg'),
+    url('/src/assets/images/pattern-squiggly-line-bottom-desktop.svg'),
+    url('../assets/images/pattern-lines.svg'),
+    url('../assets/images/pattern-circle.svg'),
+    url('../assets/images/pattern-squiggly-line-top.svg'),
+    url('/src/assets/images/background-desktop.png');
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+    no-repeat;
+  background-position: top -100px left, bottom left, top right, right 20% bottom,
+    top 20% right, auto;
+  background-size: auto, auto, auto, auto, auto, contain;
+  min-height: 100vh;
+
+  @media only screen and (max-width: 900px) {
+    background: url('../assets/images/pattern-circle.svg'),
+      url('/src/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg'),
+      url('../assets/images/pattern-lines.svg'),
+      url('../assets/images/pattern-circle.svg'),
+      url('../assets/images/pattern-squiggly-line-top.svg'),
+      url('/src/assets/images/background-tablet.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+      no-repeat;
+    background-position: top -100px left, bottom left, top right,
+      right 20% bottom, top right, top left;
+  }
+
+  @media only screen and (max-width: 600px) {
+    background: url('/src/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg'),
+      url('../assets/images/pattern-lines.svg'),
+      url('../assets/images/pattern-squiggly-line-top.svg'),
+      url('/src/assets/images/background-mobile.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: bottom left, top right, top right, top left;
+    background-size: 80%, auto, 50%, auto;
+  }
+}
+
+@mixin flexAlignStart() {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+@mixin flexAlignCenter() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flexAllCenter() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@mixin uploadBorder() {
+  background-color: $color_Neutral_200;
+
+  border: 1px solid $color_Neutral_200;
+  border-radius: 10px;
+}
